@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tienda Sports</title>
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/estilos2.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&display=swap" rel="stylesheet"> 
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Acerca de</a>
+            <a href="index.html">Productos</a>
+            <a href="index.html">Servicios</a>            
+            <a href="index.html">Contacto</a>
+            <a href="solicitud.html">Solicitud de Servicios</a>
+            <a href="cuentanos.html">Cuéntanos de ti</a>
+
+        </nav>
+        <section class="textos-header" id="inicio">
+            <h1>Eleva tu Estilo </h1>
+            <h2>Descubre las Últimas Tendencias en Ropa</h2>
+        </section>
+        <div class="wave" style="height: 150px; overflow: hidden;"><svg viewBox="0 0 500 150" preserveAspectRatio="none"
+                style="height: 100%; width: 100%;">
+                <path d="M0.00,49.98 C150.00,150.00 349.20,-50.00 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
+                    style="stroke: none; fill: #ffffff;"></path>
+            </svg></div>
+    </header>
+    <main>
+        <section class="contenedor sobre-nosotros" id="sobre-nosotros">
+            <h2 class="titulo">SOLICITUD DE SERVICIOS</h2>
+            <div class="contenedor-sobre-nosotros">
+                <img src="img/registro2.jpg" alt="" class="imagen-about-us">
+                <div class="contenido-textos">
+                    
+                    <div class="content">
+                        
+                    
+                        
+    <h1>Datos Ingresados</h1>
+
+    <!-- Mostrar los datos almacenados en otra página como una tabla -->
+    <table border="1">
+        <tr>
+            <th>Nombres y Apellidos</th>
+            <td id="nombres_apellidos"></td>
+        </tr>
+        <tr>
+            <th>Correo electrónico</th>
+            <td id="correo"></td>
+        </tr>
+        <tr>
+            <th>Número de celular</th>
+            <td id="numero_celular"></td>
+        </tr>
+        <tr>
+            <th>Servicio solicitado</th>
+            <td id="servicio"></td>
+        </tr>
+    </table>
+
+    <script>
+        // Recuperar datos del almacenamiento local y mostrarlos en la tabla
+        document.getElementById("nombres_apellidos").innerText = localStorage.getItem("nombres_apellidos");
+        document.getElementById("correo").innerText = localStorage.getItem("correo");
+        document.getElementById("numero_celular").innerText = localStorage.getItem("numero_celular");
+        document.getElementById("servicio").innerText = localStorage.getItem("servicio");
+    </script>
+        </section>
+       
+    <footer>
+        
+        <div class="contenedor-footer">
+            <div class="content-foo">
+                <h4>PBX</h4>
+                <p>8296312</p>
+            </div>
+            <div class="content-foo">
+                <h4>Celular</h4>
+                <p>3103669412</p>
+            </div>
+            <div class="content-foo">
+                <h4>Correo Electronico</h4>
+                <p>Sports@gmail.com</p>
+            </div>
+            <div class="content-foo">
+                <h4>Ubicacion</h4>
+                <p>Medellin Ant</p>
+            </div>
+        </div>
+        <h2 class="titulo-final">&copy; Sports | Shops</h2>
+    </footer>
+</body>
+
+</html>

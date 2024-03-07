@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tienda Sports</title>
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/estilos2.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&display=swap" rel="stylesheet"> 
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Acerca de</a>
+            <a href="index.html">Productos</a>
+            <a href="index.html">Servicios</a>            
+            <a href="index.html">Contacto</a>
+            <a href="solicitud.html">Solicitud de Servicios</a>
+            <a href="cuentanos.html">Cuéntanos de ti</a>
+
+        </nav>
+        <section class="textos-header" id="inicio">
+            <h1>Eleva tu Estilo </h1>
+            <h2>Descubre las Últimas Tendencias en Ropa</h2>
+        </section>
+        <div class="wave" style="height: 150px; overflow: hidden;"><svg viewBox="0 0 500 150" preserveAspectRatio="none"
+                style="height: 100%; width: 100%;">
+                <path d="M0.00,49.98 C150.00,150.00 349.20,-50.00 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
+                    style="stroke: none; fill: #ffffff;"></path>
+            </svg></div>
+    </header>
+    <main>
+        <section class="contenedor sobre-nosotros" id="sobre-nosotros">
+            <h2 class="titulo">SOLICITUD DE SERVICIOS</h2>
+            <div class="contenedor-sobre-nosotros">
+                <img src="img/registro2.jpg" alt="" class="imagen-about-us">
+                <div class="contenido-textos">
+                    
+                    <div class="content">
+                        
+                    
+                        <!-- Formulario de Solicitud de Servicio -->
+                        
+                        <form id="solicitudForm" onsubmit="guardarDatos(event)">
+                            <p>  </p>
+                            <label for="nombres_apellidos">NOMBRES Y APELLIDOS:</label>
+                            <input type="text" id="nombres_apellidos" name="nombres_apellidos" required>
+                            <p>  </p>
+                            <label for="correo">CORREO ELECTRONICO:</label>
+                            <input type="email" id="correo" name="correo" required>
+                            <p>  </p>
+                            <label for="numero_celular">NUMERO DE CELULAR:</label>
+                            <input type="tel" id="numero_celular" name="numero_celular" pattern="[0-9]+" required>
+                            <p>  </p>
+                            <label for="servicio">SERVICIOS QUE SOLICITA:</label>
+                            <select id="servicio" name="servicio" required>
+                                <option value="Personalizacion">Personalización</option>
+                                <option value="PedidoMayorista">Pedido Mayorista</option>
+                                <option value="Devolucion">Devolución</option>
+                            </select>
+                    
+                            <button type="submit">Enviar datos</button>
+                            <a href="index.html"><input type="button" value="Cancelar"></a>
+                        </form>
+                    
+                        <!-- ... Otros elementos de la página ... -->
+                    
+                        <script>
+                            function guardarDatos(event) {
+                                event.preventDefault();  // Evitar el envío del formulario por defecto
+                    
+                                // Obtener los valores de los inputs y la lista desplegable
+                                var nombresApellidos = document.getElementById("nombres_apellidos").value;
+                                var correo = document.getElementById("correo").value;
+                                var numeroCelular = document.getElementById("numero_celular").value;
+                                var servicio = document.getElementById("servicio").value;
+                    
+                                // Almacenar datos en el almacenamiento local
+                                localStorage.setItem("nombres_apellidos", nombresApellidos);
+                                localStorage.setItem("correo", correo);
+                                localStorage.setItem("numero_celular", numeroCelular);
+                                localStorage.setItem("servicio", servicio);
+                    
+                                // Redirigir a la otra página
+                                window.location.href = "tabla.html";
+                            }
+                        </script>
+        </section>
+       
+    <footer>
+        
+        <div class="contenedor-footer">
+            <div class="content-foo">
+                <h4>PBX</h4>
+                <p>8296312</p>
+            </div>
+            <div class="content-foo">
+                <h4>Celular</h4>
+                <p>3103669412</p>
+            </div>
+            <div class="content-foo">
+                <h4>Correo Electronico</h4>
+                <p>Sports@gmail.com</p>
+            </div>
+            <div class="content-foo">
+                <h4>Ubicacion</h4>
+                <p>Medellin Ant</p>
+            </div>
+        </div>
+        <h2 class="titulo-final">&copy; Sports | Shops</h2>
+    </footer>
+</body>
+
+</html>
